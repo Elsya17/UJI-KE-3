@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nabisya Salted Egg</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+    background: #311432;
+}
+
+/* ⭐ INI KUNCI UTAMA GAMBAR SEMUA SAMA */
+img {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.hero h1 {
+    margin: 10px 0;
+}
+
+.hero p {
+    opacity: 0.9;
+}
+
+/* WELCOME */
+.welcome {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* MENU */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    color: #311432;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #311432;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: #311432;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* CONTENT */
+.content {
+    display: none;
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    animation: fade 0.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+img.content-img {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+</style>
+
+<script>
+function toggle(id) {
+    var contents = document.getElementsByClassName("content");
+
+    // Tutup semua
+    for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = "none";
+    }
+
+    // Buka yang dipilih
+    document.getElementById(id).style.display = "block";
+}
+</script>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <!-- GANTI LINK GAMBAR POSTER -->
+    <img src="LINK_GDRIVE_POSTER_DI_SINI" alt="Poster Produk">
+    <h1>NABISYA SALTED EGG</h1>
+    <p>With Garlic & Coriander Spices</p>
+    <p>Inovasi Telur Asin Dengan Cita Rasa Khas dan Sentuhan Rempah Pilihan.</p>
+</div>
+
+<!-- WELCOME -->
+<div class="welcome">
+    <p>
+        Selamat datang di halaman informasi seputar Nabisya Salted Egg.
+        Jelajahi berbagai informasi secara interaktif mulai dari inovasi,
+        proses pembuatan, keunggulan produk hingga perbedaan produk kami.
+    </p>
+</div>
+
+<!-- MENU -->
+<div class="menu">
+
+    <div class="card" onclick="toggle('inovasi')">Inovasi</div>
+    <div class="card" onclick="toggle('lokasi')">Lokasi</div>
+    <div class="card" onclick="toggle('proses')">Proses</div>
+    <div class="card" onclick="toggle('keunggulan')">Keunggulan</div>
+    <div class="card" onclick="toggle('perbedaan')">Perbedaan</div>
+
+</div>
+
+<!-- CONTENT -->
+
+<div id="inovasi" class="content">
+    <h2>Filosofi, Pengertian & Inovasi</h2>
+    <p>
+        Telur asin merupakan produk olahan pangan yang diawetkan menggunakan garam untuk memperpanjang masa simpan dan menghasilkan rasa gurih khas. Proses ini juga memberikan perubahan pada tekstur dan aroma telur sehingga menjadi lebih menarik untuk dikonsumsi.
+    </p>
+    <p>
+        Produk Nabisya Salted Egg menghadirkan inovasi melalui penambahan rempah berupa bawang putih dan ketumbar. Inovasi ini bertujuan untuk menciptakan cita rasa yang lebih kaya serta memberikan pengalaman baru dalam menikmati telur asin.
+    </p>
+    <p>
+        Filosofi dari produk ini adalah menggabungkan tradisi dan inovasi, di mana makanan sederhana dapat dikembangkan menjadi produk yang lebih modern dan diminati oleh berbagai kalangan.
+    </p>
+</div>
+
+<div id="lokasi" class="content">
+    <h2>Lokasi Bahan Baku</h2>
+
+    <!-- GANTI LINK GAMBAR MAP -->
+    <img src="denah.jpeg" alt="denah">
+
+    <p>
+        Bahan baku pembuatan telur asin diperoleh dari beberapa lokasi yang mudah dijangkau. Bahan utama seperti telur bebek, garam krosok, dan rempah-rempah yaitu bawang putih dan ketumbar diperoleh dari pasar tradisional Setono Betek sedangkan bahan tambahan seperti bubuk batu bata merah diperoleh dari toko bangunan Subur Makmur dan packaging yang diperoleh dari toko plastik Santosa.
+    </p>
+    <p>
+        Pemilihan lokasi pembelian didasarkan pada kelengkapan bahan, kemudahan akses, serta efisiensi biaya. Hal ini bertujuan agar seluruh proses produksi dapat berjalan dengan optimal. 
+    </p>
+</div>
+
+<div id="proses" class="content">
+    <h2>Proses Pembuatan</h2>
+
+    <!-- GANTI LINK GAMBAR DOKUMENTASI -->
+    <img src="LINK_GDRIVE_DOKUM" class="content-img">
+
+    <p>
+        Proses pembuatan dimulai dengan pemilihan telur bebek berkualitas, kemudian dibersihkan untuk menjaga kebersihan dan kualitasnya. Setelah itu, dibuat adonan pasta dari campuran bubuk batu bata dan garam yang diberi air hingga sesuai.
+    </p>
+    <p>
+        Telur dilapisi dengan pasta tersebut secara merata, dengan sebagian diberi tambahan rempah sebagai inovasi. Selanjutnya, telur disimpan selama kurang lebih 5-14 hari untuk proses pengasinan.
+    </p>
+    <p>
+        Setelah itu, telur semi kukus selama 2 jam hingga matang. Kami memilih proses semi kukus agar hasil telur padat dan kenyal, namun tidak berair dan tidak kopong. Juga dengan tujuan agar masa simpan lebih tahan lama maksimal sampai 10 hari disuhu ruang. Kemudia angkat dan dinginkan lalu Nabisya Salted Egg siap dikonsumsi.
+    </p>
+</div>
+
+<div id="keunggulan" class="content">
+    <h2>Keunggulan Produk</h2>
+    <p>
+        Nabisya Salted Egg memiliki keunggulan berupa cita rasa gurih khas dengan tambahan variasi rempah yang memberikan sensasi berbeda. Produk ini juga memiliki daya simpan yang lebih lama dibandingkan telur biasa hingga maksimal 10 hari di suhu ruang.
+    </p>
+    <p>
+        Selain itu, bahan yang digunakan mudah diperoleh dan proses pembuatannya relatif sederhana sehingga berpotensi untuk dikembangkan menjadi produk usaha. Kemasan yang praktis juga mendukung keamanan dan kemudahan dalam penyimpanan.
+    </p>
+</div>
+
+<div id="perbedaan" class="content">
+    <h2>Perbedaan Berempah & Tidak</h2>
+    <p>
+        Telur asin berempah memiliki rasa yang lebih kaya dengan tambahan cita rasa dari bawang putih dan ketumbar, serta aroma yang lebih harum. Sementara itu, telur asin tanpa rempah memiliki rasa gurih asin yang lebih sederhana dan khas.
+    </p>
+    <p>
+        Dari segi tekstur dan warna, keduanya tidak memiliki perbedaan yang signifikan karena menggunakan proses dasar yang sama. Perbedaan utama terletak pada rasa dan aroma yang dihasilkan.
+    </p>
+</div>
+
+</body>
+</html>
